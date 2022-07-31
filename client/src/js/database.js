@@ -12,7 +12,7 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
+// Add text to indexedDB
 export const putDb = async (content) => {
   const jateDB = await openDB ("JATE", 1)
   const transaction = jateDB.transaction("JATE", "readwrite")
@@ -24,7 +24,7 @@ export const putDb = async (content) => {
   console.error('putDb implemented', result.value)};
 
 
-// TODO: Add logic for a method that gets all the content from the database
+// Retrive text from indexedDB
 export const getDb = async () => {
   const jateDB = await openDB ("JATE", 1)
   const transaction = jateDB.transaction("JATE", "readonly")
